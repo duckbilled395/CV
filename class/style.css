@@ -24,14 +24,15 @@ body {
     background: #fff;
     margin: 50px 0px 0px 0px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 300px 2fr;
     box-shadow: 35px 0px 55px rgba(0, 0, 0, 0.1);
 }
 
 .container .left_Side {
     position: relative;
     background: #003147;
-    padding: 40px;
+    padding: 20px;
+    width: 300px;
 }
 
 .profileText {
@@ -152,7 +153,7 @@ body {
 .container .right_Side {
     position: relative;
     background: #fff;
-    padding: 40px;
+    padding: 20px;
 }
 
 .about {
@@ -168,10 +169,12 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 p {
     color: #333;
+    font-size: 14px;
 }
 
 .about__company {
@@ -185,6 +188,7 @@ p {
 
 .about__company_tasks {
     color: #003147;
+    font-size: 14px;
 }
 
 .about__company_name {
@@ -200,11 +204,19 @@ p {
     display: flex;
     flex-direction: row;
     margin: 20px 0;
+    gap: 16px;
 }
 
 .about .box .year_company {
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.year_company {
+    & .duration {
+        text-align: center;
+        font-size: 10px;
+    }
 }
 
 .about .box .year_company h5 {
@@ -230,14 +242,14 @@ p {
     /*color: #03a9f4;*/
     color: #003147;
     font-family: 'Poppins', sans-serif;
-    margin: 5px 15px;
+    margin: 0px 15px;
 }
 
 .skills_box {
     font-family: 'Poppins', sans-serif;
     color: #848c90;
     font-size: 16px;
-    margin-left: 10px;
+    margin: 5px 0 5px 10px;
 }
 
 .interest ul {
@@ -364,6 +376,29 @@ p {
     font-weight: normal;
 }
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & .project__title {
+        color: #003147;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    & .project {
+
+    }
+
+    & h4 {
+        text-transform: uppercase;
+        color: #2a7da2;
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 1000px) {
     .container {
         grid-template-columns: repeat(1, 1fr);
@@ -400,5 +435,12 @@ p {
 
     .skills .box {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .container .left_Side {
+        padding: 20px;
+        width: auto;
+    }
+    .container {
+        margin-top: 0;
     }
 }
