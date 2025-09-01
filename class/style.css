@@ -398,6 +398,9 @@ p {
         font-size: 16px;
     }
 }
+p {
+    text-align: justify;
+}
 
 @media (max-width: 1000px) {
     .container {
